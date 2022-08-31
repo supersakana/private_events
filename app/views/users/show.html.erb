@@ -1,6 +1,7 @@
-<h3><%= @user.email %></h3>
+<%=@user.username%><br>
 
-<%= @user.events.each do |event| %>
-    event.title
-    event.description
+<% @user.events.each do |event| %>
+   <%= event.title %>
+   <br>
+   <%= event.description %>
 <% end %>
