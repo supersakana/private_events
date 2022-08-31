@@ -3,7 +3,8 @@
 <% @events.each do |event| %>
     <%= event.creator.username %>
     <br>
-    <%= event.title %>
+    <span class="text-lg font-bold"><%= link_to event.title, event %></span>
     <br>
     <%= event.description %>
+    <br><br>
 <% end %>
