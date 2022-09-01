@@ -1,6 +1,6 @@
 <%= render 'nav' %>
 
-<% @events.each do |event| %>
+<% @events.reverse.each do |event| %>
     <%= event.creator.username %>
     <br>
     <span class="text-lg font-bold"><%= link_to event.title, event %></span>
