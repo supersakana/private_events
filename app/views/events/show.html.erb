@@ -3,6 +3,9 @@
 <%= @event.description %>
 
 <h2>Attendees</h2>
+<% @event.attendees.reverse.uniq.each do |attendee| %>
+    <%= attendee.username %>
+<% end %>
 
 
 <%= render partial:"join" %>
