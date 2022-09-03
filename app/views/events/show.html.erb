@@ -1,11 +1,14 @@
 <%= @event.title %>
 <%= @event.description %>
+<%= @event.date %>
+<%= "Created by #{@event.creator.username}" %>
+
 
 <h2>Attendees</h2>
 <% @event.attendees.reverse.uniq.each do |attendee| %>
     <%= attendee.username %>
 <% end %>
 
-<% if @event.creator != current_user%>
+<% unless @event.creator == current_user %>
     <%= render partial:"join" %>
 <% end %>
