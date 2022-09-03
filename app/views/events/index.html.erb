@@ -1,5 +1,3 @@
-<%= render 'nav' %>
-
 <h2>Upcoming Events...</h2>
 <% @events_past.reverse.each do |event| %>
     <%= event.creator.username %>

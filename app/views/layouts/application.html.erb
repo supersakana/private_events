@@ -3,7 +3,7 @@
   <head>
     <title>PrivateEvents</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%# <script src="https://cdn.tailwindcss.com"></script> %>
+    <script src="https://cdn.tailwindcss.com"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,9 +11,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-400">
+  <body class="#">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render 'events/nav' %>
     <%= yield %>
   </body>
 </html>
