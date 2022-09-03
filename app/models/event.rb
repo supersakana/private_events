@@ -6,4 +6,12 @@ class Event < ApplicationRecord
   validates :date, presence: true
   validates :title, presence: true
   validates :description, presence: true
+
+  def self.future
+    where('date >= ?', Time.now)
+  end
+
+  def self.past
+    where('date < ?', Time.now)
+  end
 end

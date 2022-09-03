@@ -1,6 +1,17 @@
 <%= render 'nav' %>
 
-<% @events.reverse.each do |event| %>
+<h2>Upcoming Events...</h2>
+<% @events_past.reverse.each do |event| %>
+    <%= event.creator.username %>
+    <br>
+    <span class="text-lg font-bold"><%= link_to event.title, event %></span>
+    <br>
+    <%= event.description %>
+    <br><br>
+<% end %>
+
+<h2>Previous Events...</h2>
+<% @events_future.reverse.each do |event| %>
     <%= event.creator.username %>
     <br>
     <span class="text-lg font-bold"><%= link_to event.title, event %></span>
