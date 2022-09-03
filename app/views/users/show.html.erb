@@ -1,9 +1,10 @@
 <%=@user.username%><br>
 
-<h2>Events</h2>
+<h2>Hosting Events</h2>
 <% @user.events.each do |event| %>
    <%= event.title %>
    <%= event.description %>
+   <%= event.date %>
    <br>
    <br>
 <% end %>
@@ -12,6 +13,7 @@
 <% @user.attended_events.each do |event| %>
    <%= event.title %>
    <%= event.description %>
+   <%= event.date %>
    <br>
    <br>
 <% end %>

@@ -1,5 +1,4 @@
 <%= @event.title %>
-<br>
 <%= @event.description %>
 
 <h2>Attendees</h2>
@@ -7,5 +6,6 @@
     <%= attendee.username %>
 <% end %>
 
-
-<%= render partial:"join" %>
+<% if @event.creator != current_user%>
+    <%= render partial:"join" %>
+<% end %>
