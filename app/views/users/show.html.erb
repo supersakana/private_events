@@ -3,14 +3,14 @@
 <h2>Events</h2>
 <% @user.events.each do |event| %>
    <%= event.title %>
-   <br>
    <%= event.description %>
+   <br>
+   <br>
 <% end %>
 
 <h2>Attending Events</h2>
 <% @user.attended_events.each do |event| %>
    <%= event.title %>
-   <br>
    <%= event.description %>
    <br>
    <br>
